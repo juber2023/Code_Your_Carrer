@@ -9,20 +9,23 @@ const Header = () => {
     }
 
     return (
-        <div className='w-3/4 mx-auto'>
-            <nav className='flex justify-between my-5 items-center'>
-                <h1 className='text-xl font-semibold'>Code Your Career</h1>
-                <div className='space-x-5'>
-                    <ActiveLink to='/'>Home</ActiveLink>
-                    <ActiveLink to='statistics'>Statistics</ActiveLink>
-                    <ActiveLink to='appliedJobs'>Applied Jobs</ActiveLink>
-                    <ActiveLink to='blog'>Blog</ActiveLink>
-                </div>
-                <div>
-                    <button className='bg-violet-500 p-2 rounded-xl text-white font-semibold'>Start Applying</button>
-                </div>
-                
-            </nav>
+        <div className=''>
+            <div className='bg-violet-100'>
+                <nav className='flex justify-between py-5 items-center w-3/4 mx-auto'>
+                    <h1 className='text-xl font-semibold'>Code Your Career</h1>
+                    <div className='space-x-5'>
+                        <ActiveLink to='/'>Home</ActiveLink>
+                        <ActiveLink to='statistics'>Statistics</ActiveLink>
+                        <ActiveLink to='appliedJobs'>Applied Jobs</ActiveLink>
+                        <ActiveLink to='blog'>Blog</ActiveLink>
+                    </div>
+                    <div>
+                        <button className='btn'>Start Applying</button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
             <Outlet></Outlet>
         </div>
     );

@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn{
+    @apply bg-violet-500 p-2 rounded-lg text-white font-semibold
+}
+
+.violet{
+    @apply text-violet-500
+}
