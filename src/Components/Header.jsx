@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <div className=''>
-            <div className='bg-violet-100'>
+            <div className='bg-violet-50'>
                 <nav className='flex justify-between py-5 items-center w-3/4 mx-auto'>
                     <h1 className='text-xl font-semibold'>Code Your Career</h1>
                     <div className='space-x-5'>
@@ -25,7 +25,6 @@ const Header = () => {
                     
                 </nav>
             </div>
-            
             <Outlet></Outlet>
         </div>
     );

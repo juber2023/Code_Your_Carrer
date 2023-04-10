@@ -9,3 +9,6 @@
 .violet{
     @apply text-violet-500
 }
+.gray{
+    @apply text-gray-400
+}

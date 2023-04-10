@@ -1,0 +1,22 @@
+[
+    {   "id":1,
+        "icon":"../src/assets/Icons/accounts.png",
+        "title": "Account & Finance",
+        "vacancy": 350
+    },
+    {   "id":2,
+        "icon":"../src/assets/Icons/business.png",
+        "title": "Creative Design",
+        "vacancy": 100
+    },
+    {   "id":3,
+        "icon":"../src/assets/Icons/chip.png",
+        "title": "Marketing & Sales",
+        "vacancy": 200
+    },
+    {   "id":4,
+        "icon":"../src/assets/Icons/Frame-1.png",
+        "title": "Engineering Job",
+        "vacancy": 50
+    }
+]

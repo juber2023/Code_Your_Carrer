@@ -1,8 +1,10 @@
 import React from 'react';
+import JobList from './JobList';
 
 const Home = () => {
     return (
-        <div className='bg-violet-100'>
+        <div>
+            <div className='bg-violet-50'>
             <div className='grid md:grid-cols-2 items-center gap-5 w-3/4 mx-auto'>
             <div>
                 <h1 className='font-semibold text-5xl flex flex-col'>
@@ -16,10 +18,13 @@ const Home = () => {
                 <button className='btn'>Get Started</button>
             </div>
             <div>
-                <img className='h-[740px] rounded-lg object-cover w-full' src="src\assets\juber office.jpg" alt="" srcset="" />
+                <img className='h-[calc(100vh-100px)] rounded-lg object-cover w-full' src="src\assets\All Images\juber.jpg" alt="" srcset="" />
             </div>
         </div>
         </div>
+            <JobList></JobList>
+        </div>
+        
         
     );
 };
