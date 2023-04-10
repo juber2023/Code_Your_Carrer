@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import {CurrencyDollarIcon, MapPinIcon } from '@heroicons/react/24/solid'
 
-const FeaturedJobs = () => {
+const FeaturedJobs = ({jobs}) => {
+    jobs.splice(4)
     return (
-        <div>
+        <div className='w-3/4 mx-auto'>
+            <div className='text-center mt-10 mb-3'>
+            <h1 className='text-3xl font-bold'>Featured Jobs</h1>
+            <p className='gray'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            </div>
+            <div className='grid md:grid-cols-2 gap-7'> 
+                { 
+                    jobs.map(job=>{
+                        return <div className='p-8 border border-gray-400 shadow-lg rounded-lg' key={job.id}>
+                            <img className='w-[270px] h-[200px] rounded-lg' src={job.image} alt="" />
+                            <h1 className='font-semibold text-2xl'>{job.title}</h1>
+                            <p>{job.name}</p>
+                            <div className='flex space-x-4 violet my-3'>
+                                <p className='border border-violet-400 p-1 rounded-md'>{job.method}</p>
+                                <p className='border border-violet-400 p-1 rounded-md'>Full Time</p>
+                            </div>
+                            <div className='flex space-x-4'>
+                                <p><MapPinIcon className="h-5 w-5 inline text-white bg-gray-600 rounded-full" /> {job.location}</p>
+                                <p><CurrencyDollarIcon className="h-5 w-5 inline text-white bg-gray-600 rounded-full" /> Salary: {job.salary}</p>
+                            </div>
+                            <Link to={`/jobDetails/${job.id}`}><button className='btn mt-3'>View Details</button></Link>
+                            
+                        </div>
+                    })
+                }
+            </div>
+            <button className='btn flex mx-auto my-8'>See all jobs</button>
+            
             
         </div>
     );

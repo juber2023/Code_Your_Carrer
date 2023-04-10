@@ -18,7 +18,7 @@ const JobList = () => {
             {
                 jobList.map(job=>{
                     return <div key={job.id} className='bg-violet-50 p-5 rounded-lg'>
-                        <img className='bg-violet-200 p-3 rounded-lg' src={job.icon} alt="" />
+                        <img className='bg-violet-200 p-3 rounded-lg h-20' src={job.icon} alt="" />
                         <h1 className='font-semibold mt-4'>{job.title}</h1>
                         <p className='gray'>{job.vacancy}+Jobs Available</p>
                     </div>

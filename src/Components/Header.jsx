@@ -11,12 +11,12 @@ const Header = () => {
     return (
         <div className=''>
             <div className='bg-violet-50'>
-                <nav className='flex justify-between py-5 items-center w-3/4 mx-auto'>
+                <nav className='md:flex justify-between py-5 items-center w-3/4 mx-auto'>
                     <h1 className='text-xl font-semibold'>Code Your Career</h1>
                     <div className='space-x-5'>
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='statistics'>Statistics</ActiveLink>
-                        <ActiveLink to='appliedJobs'>Applied Jobs</ActiveLink>
+                        <ActiveLink to='appliedJobs'>Applied_Jobs</ActiveLink>
                         <ActiveLink to='blog'>Blog</ActiveLink>
                     </div>
                     <div>

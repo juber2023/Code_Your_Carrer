@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
@@ -11,6 +11,7 @@ import Home from './Components/Home';
 import Statistics from './Components/Statistics';
 import AppliedJobs from './Components/AppliedJobs';
 import Blog from './Components/Blog';
+import JobDetails from './Components/JobDetails';
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:()=>fetch('FakeFeaturedJobs.json')
       },
       {
         path:'/statistics',
@@ -35,11 +37,21 @@ const router = createBrowserRouter([
         path:'/blog',
         element: <Blog></Blog>
       },
+      {
+        path:'/jobDetails/:id',
+        element: <JobDetails></JobDetails>,
+        // loader: async () => {
+        //   return fakeDb.from("jobDetails").select("FakeFeaturedJobs.json");
+        // },
+        loader:({params})=>fetch('/FakeFeaturedJobs.json')
+      },
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- 
-    <RouterProvider router={router} />
+ <React.StrictMode>
+<RouterProvider router={router} />
+ </React.StrictMode>
+    
 )

@@ -1,21 +1,21 @@
 [
     {   "id":1,
-        "icon":"../src/assets/Icons/accounts.png",
+        "icon":"https://img.freepik.com/premium-psd/mockup-with-gold-logo_136295-386.jpg?w=1380",
         "title": "Account & Finance",
         "vacancy": 350
     },
     {   "id":2,
-        "icon":"../src/assets/Icons/business.png",
+        "icon":"https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?w=826&t=st=1681123175~exp=1681123775~hmac=31305ed46dadfd70de4cfd8dfaf62a9cf79b03098f681a49cbdff408e530d8e9",
         "title": "Creative Design",
         "vacancy": 100
     },
     {   "id":3,
-        "icon":"../src/assets/Icons/chip.png",
+        "icon":"https://img.freepik.com/free-psd/engraved-black-logo-mockup_125540-223.jpg?w=826&t=st=1681123220~exp=1681123820~hmac=650790f8801620882615ef00672d05baacd877499cdbab97d22bdc95253ab08b",
         "title": "Marketing & Sales",
         "vacancy": 200
     },
     {   "id":4,
-        "icon":"../src/assets/Icons/Frame-1.png",
+        "icon":"https://img.freepik.com/free-vector/red-logo-black-background_1195-52.jpg?w=826&t=st=1681123247~exp=1681123847~hmac=cac65b112152def73d08c377639eb2c621e324c88ebc52b93ac4796c89c0c1ce",
         "title": "Engineering Job",
         "vacancy": 50
     }

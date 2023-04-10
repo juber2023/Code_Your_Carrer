@@ -12,3 +12,6 @@
 .gray{
     @apply text-gray-400
 }
+.icon{
+    @apply h-5 w-5 inline
+}
