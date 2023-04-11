@@ -2,51 +2,48 @@ import React, { PureComponent } from 'react';
 import {
     ComposedChart,
     Line,
-    Area,
     Bar,
     XAxis,
     YAxis,
-    CartesianGrid,
     Tooltip,
     Legend,
-    ResponsiveContainer,
   } from 'recharts';
 
 const Statistics = () => {
     const assignmentMarks=[
         {   
             name:'A1',
-            assignment:1,
+            id:1,
             marks:57
         },
         {   
             name:'A2',
-            assignment:2,
+            id:2,
             marks:60
         },
         {   
             name:'A3',
-            assignment:3,
+            id:3,
             marks:60
         },
         {   
             name:'A4',
-            assignment:4,
+            id:4,
             marks:60
         },
         {   
             name:'A5',
-            assignment:5,
+            id:5,
             marks:60
         },
         {   
             name:'A6',
-            assignment:6,
+            id:6,
             marks:60
         },
         {   
             name:'A7',
-            assignment:7,
+            id:7,
             marks:60
         },
     ]

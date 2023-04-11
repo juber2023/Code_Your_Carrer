@@ -12,6 +12,7 @@ import Statistics from './Components/Statistics';
 import AppliedJobs from './Components/AppliedJobs';
 import Blog from './Components/Blog';
 import JobDetails from './Components/JobDetails';
+import { productsAndCartData } from './fakedb';
 
 
 const router = createBrowserRouter([
@@ -31,7 +32,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/appliedJobs',
-        element: <AppliedJobs></AppliedJobs>
+        element: <AppliedJobs></AppliedJobs>,
+        loader:()=>fetch('FakeFeaturedJobs.json')
+        // loader: productsAndCartData,
       },
       {
         path:'/blog',
@@ -40,9 +43,6 @@ const router = createBrowserRouter([
       {
         path:'/jobDetails/:id',
         element: <JobDetails></JobDetails>,
-        // loader: async () => {
-        //   return fakeDb.from("jobDetails").select("FakeFeaturedJobs.json");
-        // },
         loader:({params})=>fetch('/FakeFeaturedJobs.json')
       },
     ]

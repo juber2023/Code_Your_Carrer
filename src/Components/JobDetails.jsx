@@ -1,6 +1,7 @@
 import { CalculatorIcon, CalendarIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../fakedb';
 
 const JobDetails = () => {
     const [job,setJob]=useState({})
@@ -11,8 +12,10 @@ const JobDetails = () => {
         // console.log(details);
         setJob(details.find(data=>data.id==dynamic.id))   
     },[dynamic.id,details])
-    console.log(job)
-    
+
+    function applyJob(id){
+        addToDb(id)
+    }
     
 
     
@@ -38,7 +41,7 @@ const JobDetails = () => {
                     <p><PhoneIcon className="icon" /><span className='font-semibold'>Phone: </span> {job.phone}</p>
                     <p><EnvelopeIcon className="icon" /><span className='font-semibold'>Email:</span>  {job.email}</p>
                     <p><MapPinIcon className="icon" /><span className='font-semibold'>Address:</span>  {job.location}</p>
-                    <button className='btn w-full absolute -bottom-14 -translate-x-8'>Apply now</button>
+                    <button onClick={()=>applyJob(job.id)}  className='btn w-full absolute -bottom-14 -translate-x-8'>Apply now</button>
                 </div>
                 
                 </div>
