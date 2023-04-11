@@ -13,13 +13,14 @@ import AppliedJobs from './Components/AppliedJobs';
 import Blog from './Components/Blog';
 import JobDetails from './Components/JobDetails';
 import { productsAndCartData } from './fakedb';
+import Error from './Components/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Header></Header>,
-    errorElement:<div>not found</div>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
