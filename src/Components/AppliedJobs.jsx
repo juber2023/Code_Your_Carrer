@@ -13,14 +13,27 @@ const AppliedJobs = () => {
             jobArray.push(foundJobs)
         }
     }
-    console.log(jobArray)
+
+    const [data, setData] = useState(jobArray);
+    const handleRemote = () => {
+        setData(jobArray.filter(job=>job.method=='Remote'))
+      };
+    const handleOnsite = () => {
+        setData(jobArray.filter(job=>job.method=='Onsite'))
+      };
     
     return (
         <div className=''>
             <h1 className='font-semibold text-2xl text-center p-16 bg-violet-50'>Applied Jobs</h1>
-            <div className='w-3/4 mx-auto space-y-6 my-5'>
+            <div className='flex justify-end w-3/4 space-x-3 mt-5'>
+            <button className='btn focus:bg-orange-500' onClick={handleRemote}>Remote</button>
+            <button className='btn focus:bg-orange-500' onClick={handleOnsite} >Onsite</button>
+            </div>
+            
+            
+            <div className='w-3/4 mx-auto space-y-6 mb-5 '>
                 {
-                    jobArray.map(job=>{
+                    data.map(job=>{
                         return <div className='flex justify-between items-center p-8 border border-gray-400 shadow-lg rounded-lg' key={job.id}>
                             <div className='flex space-x-5'>
                             <img className='w-[270px] h-[200px] rounded-lg' src={job.image} alt="" />

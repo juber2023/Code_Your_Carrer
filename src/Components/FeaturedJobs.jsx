@@ -3,16 +3,20 @@ import { Link } from 'react-router-dom';
 import {CurrencyDollarIcon, MapPinIcon } from '@heroicons/react/24/solid'
 
 const FeaturedJobs = ({jobs}) => {
-    jobs.splice(4)
+    const [showCount, setShowCount] = useState(4)
+    function view(){
+        setShowCount(jobs.length)
+    }
+    // jobs.splice(4)
     return (
         <div className='w-3/4 mx-auto'>
             <div className='text-center mt-10 mb-3'>
             <h1 className='text-3xl font-bold'>Featured Jobs</h1>
             <p className='gray'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-            <div className='grid md:grid-cols-2 gap-7'> 
+            <div className='grid md:grid-cols-2 gap-7 mb-8'> 
                 { 
-                    jobs.map(job=>{
+                    jobs.slice(0, showCount).map(job=>{
                         return <div className='p-8 border border-gray-400 shadow-lg rounded-lg' key={job.id}>
                             <img className='w-[270px] h-[200px] rounded-lg' src={job.image} alt="" />
                             <h1 className='font-semibold text-2xl'>{job.title}</h1>
@@ -31,7 +35,7 @@ const FeaturedJobs = ({jobs}) => {
                     })
                 }
             </div>
-            <button className='btn flex mx-auto my-8'>See all jobs</button>
+            <button onClick={view} className={`btn flex mx-auto mb-8 ${showCount==4||'hidden'}`} >See all jobs</button>
             
             
         </div>

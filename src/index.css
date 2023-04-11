@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn{
-    @apply bg-violet-500 p-2 rounded-lg text-white font-semibold
+    @apply bg-violet-500 p-2 rounded-lg text-white font-semibold hover:scale-125 duration-150
 }
 
 .violet{

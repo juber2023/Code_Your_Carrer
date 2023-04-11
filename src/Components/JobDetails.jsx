@@ -2,19 +2,25 @@ import { CalculatorIcon, CalendarIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinI
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../fakedb';
+import Swal from 'sweetalert2';
 
 const JobDetails = () => {
     const [job,setJob]=useState({})
     const dynamic=useParams()
-    // console.log(dynamic)
     const details=useLoaderData() 
     useEffect(()=>{
-        // console.log(details);
         setJob(details.find(data=>data.id==dynamic.id))   
     },[dynamic.id,details])
 
     function applyJob(id){
         addToDb(id)
+        Swal.fire({
+            icon: 'success',
+            title: 'Done',
+            text:'Job Applied',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
     
 

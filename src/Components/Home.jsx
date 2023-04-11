@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import JobList from './JobList';
 import FeaturedJobs from './FeaturedJobs';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const jobs=useLoaderData()
+    const [jobs, SetJobs]=useState([])
+    useEffect(()=>{
+        fetch('FakeFeaturedJobs.json')
+        .then(res=>res.json())
+        .then(data=>SetJobs(data))
+    },[])
     return (
         <div>
             <div className='bg-violet-50'>
