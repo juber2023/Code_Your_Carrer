@@ -7,7 +7,6 @@ const FeaturedJobs = ({jobs}) => {
     function view(){
         setShowCount(jobs.length)
     }
-    // jobs.splice(4)
     return (
         <div className='w-3/4 mx-auto'>
             <div className='text-center mt-10 mb-3'>

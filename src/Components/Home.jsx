@@ -4,12 +4,7 @@ import FeaturedJobs from './FeaturedJobs';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const [jobs, SetJobs]=useState([])
-    useEffect(()=>{
-        fetch('FakeFeaturedJobs.json')
-        .then(res=>res.json())
-        .then(data=>SetJobs(data))
-    },[])
+    const jobs=useLoaderData()
     return (
         <div>
             <div className='bg-violet-50'>

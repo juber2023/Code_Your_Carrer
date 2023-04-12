@@ -5,8 +5,10 @@ import {CurrencyDollarIcon, MapPinIcon } from '@heroicons/react/24/solid'
 
 const AppliedJobs = () => {
     const jobsData=useLoaderData()
+    console.log(jobsData)
     const appliedJobs=getShoppingCart()
     let jobArray=[]
+    const [data, setData] = useState(jobArray);
     for(const id in appliedJobs){
         const foundJobs=jobsData.find(job=>job.id==id)
         if(foundJobs){
@@ -14,7 +16,7 @@ const AppliedJobs = () => {
         }
     }
 
-    const [data, setData] = useState(jobArray);
+      
     const handleRemote = () => {
         setData(jobArray.filter(job=>job.method=='Remote'))
       };
@@ -32,7 +34,7 @@ const AppliedJobs = () => {
             
             
             <div className='w-3/4 mx-auto space-y-6 mb-5 '>
-                {
+                {  
                     data.map(job=>{
                         return <div className='flex justify-between items-center p-8 border border-gray-400 shadow-lg rounded-lg' key={job.id}>
                             <div className='flex space-x-5'>
